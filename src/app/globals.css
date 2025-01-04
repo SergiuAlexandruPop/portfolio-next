@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Static global styles */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Incorporate styles from the old app */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Open Sans Condensed', Arial, sans-serif;
+  padding: 2rem 8rem; /* Matches the styled-components default */
+  margin: 0;
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 0.5rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
